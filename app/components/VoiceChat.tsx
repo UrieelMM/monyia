@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback, useEffect } from 'react'
-import type { GeminiMessage } from '../api/chat/route'
+import type { AIMessage } from '../api/chat/route'
 
 interface Message {
   id: string
@@ -116,7 +116,7 @@ export default function VoiceChat() {
       }
 
       // Leer historial ANTES de agregar el nuevo mensaje
-      const historySnapshot: GeminiMessage[] = messagesRef.current.map((m) => ({
+      const historySnapshot: AIMessage[] = messagesRef.current.map((m) => ({
         role: m.role,
         parts: [{ text: m.text }],
       }))
