@@ -248,7 +248,7 @@ export default function VoiceChatLive() {
     setError( '' );
     setStatus( 'connecting' );
 
-    const wsUrl = `ws://${ location.host }/api/live`;
+    const wsUrl = `${ location.protocol === 'https:' ? 'wss' : 'ws' }://${ location.host }/api/live`;
 
     let ws: WebSocket;
     try {

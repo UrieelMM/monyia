@@ -1,0 +1,25 @@
+# Dependencias (se reinstalan en el build)
+node_modules
+
+# Output de Next.js (se regenera)
+.next
+
+# Archivos de entorno con secretos
+.env.local
+.env*.local
+
+# Git y herramientas de desarrollo
+.git
+.gitignore
+
+# Logs y temporales
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode
+.idea
