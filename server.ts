@@ -21,7 +21,7 @@ try {
 } catch {}
 
 const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'localhost'
+const hostname = '0.0.0.0'
 const port = parseInt(process.env.PORT ?? '3000', 10)
 
 const app = next({ dev, hostname, port })
@@ -236,7 +236,7 @@ app.prepare().then(() => {
     geminiWs.on('error', cleanup)
   })
 
-  server.listen(port, () => {
-    console.log(`MonyIA lista en http://${hostname}:${port}`)
+  server.listen(port, hostname, () => {
+    console.log(`MonyIA lista en http://0.0.0.0:${port}`)
   })
 }).catch(() => process.exit(1))
